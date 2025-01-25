@@ -1,0 +1,49 @@
+{
+  "name": "study-design-patterns",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "node dist/server.cjs",
+    "build": "tsup src",
+    "test": "vitest run --dir src/use-cases",
+    "test:create-prisma-environment": "cd prisma/vitest-environment-prisma && npm link",
+    "test:install-prisma-environment": "cd ../../ && npm link vitest-environment-prisma",
+    "test:watch": "vitest --dir src/use-cases",
+    "pretest:e2e": "npm run test:create-prisma-environment && npm run test:install-prisma-environment",
+    "test:e2e": "vitest run --dir src/http",
+    "test:e2e:watch": "vitest --dir src/http",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Gym Pass - API",
+  "devDependencies": {
+    "@juliorarickorg/eslint-config": "1.1.2",
+    "@types/bcryptjs": "2.4.6",
+    "@types/node": "22.7.4",
+    "@types/supertest": "6.0.2",
+    "@vitest/coverage-v8": "2.1.2",
+    "eslint": "8.57.1",
+    "prisma": "5.20.0",
+    "supertest": "7.0.0",
+    "tsup": "8.3.0",
+    "tsx": "4.19.1",
+    "typescript": "5.6.2",
+    "vite-tsconfig-paths": "5.0.1",
+    "vitest": "2.1.2"
+  },
+  "dependencies": {
+    "@fastify/cookie": "11.0.1",
+    "@fastify/jwt": "9.0.1",
+    "@prisma/client": "5.20.0",
+    "bcryptjs": "2.4.3",
+    "dayjs": "1.11.13",
+    "dotenv": "16.4.5",
+    "fastify": "5.0.0",
+    "zod": "3.23.8"
+  }
+}

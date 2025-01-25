@@ -1,0 +1,7 @@
+{
+    "extends": [ "@juliorarickorg/eslint-config/node"],
+    "rules": {
+        "camelcase": "off",
+        "no-useless-constructor": "off"
+    }
+}
