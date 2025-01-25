@@ -4,7 +4,7 @@ services:
     ports:
       - "5432:5432"
     environment:
-      - POSTGRESQL_USERNAME=oxossi-admin-api
+      - POSTGRESQL_USERNAME=docker-postgres
       - POSTGRESQL_PASSWORD=JulioN4G4ita
-      - POSTGRESQL_DATABASE=oxossi-admin-api-db
+      - POSTGRESQL_DATABASE=docker-postgres-db
 

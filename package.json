@@ -1,5 +1,5 @@
 {
-  "name": "study-design-patterns",
+  "name": "node-users-api",
   "version": "1.0.0",
   "type": "module",
   "main": "server.js",
@@ -20,7 +20,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "Gym Pass - API",
+  "description": "User Auth - API",
   "devDependencies": {
     "@juliorarickorg/eslint-config": "1.1.2",
     "@types/bcryptjs": "2.4.6",
