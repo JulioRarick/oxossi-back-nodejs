@@ -1,0 +1,10 @@
+services: 
+  oxossi-admin-api-db:
+    image: bitnami/postgresql:latest
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRESQL_USERNAME=oxossi-admin-api
+      - POSTGRESQL_PASSWORD=JulioN4G4ita
+      - POSTGRESQL_DATABASE=oxossi-admin-api-db
+
