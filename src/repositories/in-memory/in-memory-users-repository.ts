@@ -39,4 +39,8 @@ export class InMemoryUsersRepository implements UsersRepository {
 
     return user
   }
+
+  async fetchAllUsers() {
+    return this.items
+  }
 }
