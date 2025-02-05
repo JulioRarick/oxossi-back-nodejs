@@ -1,0 +1,17 @@
+meta {
+  name: Update User Profile
+  type: http
+  seq: 5
+}
+
+patch {
+  url: http://localhost:5055/users/0a7c2c17-807e-4d16-aa61-2dc1ec14ab8a
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "role": "ADMIN"
+  }
+}

@@ -1,0 +1,18 @@
+meta {
+  name: Sign In
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:5055/sessions
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "juliorarick.tech@gmail.com",
+    "password": "JulioN4G4ita"
+  }
+}

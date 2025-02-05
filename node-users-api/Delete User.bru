@@ -1,0 +1,17 @@
+meta {
+  name: Delete User
+  type: http
+  seq: 6
+}
+
+delete {
+  url: http://localhost:5055/users/id
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "id": "0a7c2c17-807e-4d16-aa61-2dc1ec14ab8a"
+  }
+}

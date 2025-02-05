@@ -1,5 +1,5 @@
 import { User } from '@prisma/client'
-import * as bcrypt from 'bcryptjs'
+import bcrypt from 'bcrypt'
 
 import { UsersRepository } from '@/repositories/users-repository'
 

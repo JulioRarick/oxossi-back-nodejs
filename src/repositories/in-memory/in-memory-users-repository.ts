@@ -43,4 +43,20 @@ export class InMemoryUsersRepository implements UsersRepository {
   async fetchAllUsers() {
     return this.items
   }
+
+  async deleteUser(userId: string) {
+    this.items = this.items.filter((user) => user.id !== userId)
+  }
+
+  async updateUser(userId: string, data: { role?: 'ADMIN' | 'USER_MEMBER' }) {
+    this.items = this.items.map((user) => {
+      if (user.id === userId) {
+        return {
+          ...user,
+          ...data,
+        }
+      }
+      return user
+    })
+  }
 }
