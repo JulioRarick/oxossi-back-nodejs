@@ -37,7 +37,7 @@ describe('Delete User Controller (e2e)', () => {
     const { id } = userCreated.body
 
     const response = await request(app.server)
-      .delete(`/users/${id}`)
+      .delete(`/delete/${id}`)
       .set('Authorization', `Bearer ${token}`)
 
     expect(response.statusCode).toEqual(204)

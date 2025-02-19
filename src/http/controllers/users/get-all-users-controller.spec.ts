@@ -28,7 +28,7 @@ describe('Get All Users Controller (e2e)', () => {
     const { token } = userAuthenticated.body
 
     const response = await request(app.server)
-      .get('/users')
+      .get('/all-users')
       .set('Authorization', `Bearer ${token}`)
 
     expect(response.statusCode).toEqual(200)
