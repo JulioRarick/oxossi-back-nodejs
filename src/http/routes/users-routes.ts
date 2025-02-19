@@ -10,7 +10,7 @@ import { updateUser } from '../controllers/users/update-user-controller'
 import { verifyJWT } from '../hooks/verify-jwt'
 
 export async function userRoutes(app: FastifyInstance) {
-  app.post('/user', register)
+  app.post('/users', register)
   app.post('/sessions', authenticate)
   app.patch('/token/refresh', refresh)
 
