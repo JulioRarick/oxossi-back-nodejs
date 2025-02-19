@@ -10,12 +10,12 @@ import { updateUser } from '../controllers/users/update-user-controller'
 import { verifyJWT } from '../hooks/verify-jwt'
 
 export async function userRoutes(app: FastifyInstance) {
-  app.post('/create', register)
+  app.post('/user', register)
   app.post('/sessions', authenticate)
   app.patch('/token/refresh', refresh)
 
   app.get('/me', { onRequest: [verifyJWT] }, profile)
   app.get('/all-users', { onRequest: [verifyJWT] }, getAllUsers)
-  app.delete('/delete/:userId', deleteUser)
-  app.patch('/update/:userId', updateUser)
+  app.delete('/delete/:userId', { onRequest: [verifyJWT] }, deleteUser)
+  app.patch('/update/:userId', { onRequest: [verifyJWT] }, updateUser)
 }

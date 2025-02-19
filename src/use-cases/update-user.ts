@@ -1,4 +1,3 @@
-// filepath: src/use-cases/update-user.ts
 import { UsersRepository } from '@/repositories/users-repository'
 
 interface UpdateUserRequest {
