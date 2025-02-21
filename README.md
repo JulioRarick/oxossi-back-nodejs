@@ -1,4 +1,4 @@
-# Node Users API
+# Oxossi Node.js Users API
 
 This project is a REST API built using Node.js, Fastify, and pnpm. It's designed for use within an Administrator Platform, providing user management functionalities.
 
