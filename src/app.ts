@@ -6,6 +6,7 @@ import fastify from 'fastify'
 import { ZodError } from 'zod'
 
 import { env } from './env'
+import { dadosRoutes } from './http/routes/dados-routes'
 
 export const app = fastify()
 
@@ -27,6 +28,7 @@ app.register(fastifyCors, {
 })
 
 app.register(userRoutes)
+app.register(dadosRoutes)
 
 app.setErrorHandler((error, request, reply) => {
   if (error instanceof ZodError) {
