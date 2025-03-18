@@ -28,3 +28,37 @@ model User {
 
   @@map("users")
 }
+
+model Dados {
+  store_id    String  @id
+  id_X        String?
+  ref         String?
+  datas       String?
+  Anol        String?
+  AnoF        String?
+  periodoA    String?
+  nomes       String?
+  capitania   String?
+  lugares     String?
+  temas       String?
+  tematicas   String?
+  temaPercent String?
+  autores     String?
+  titulo      String?
+  anoPub      String?
+  fonte       String?
+  link        String?
+
+  @@map("dados")
+}
+
+model Det {
+  store_id  String  @id
+  id_X      String?
+  obra      String?
+  pagina    String?
+  tipologia String?
+  info      String?
+
+  @@map("det")
+}
