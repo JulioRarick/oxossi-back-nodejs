@@ -34,7 +34,7 @@ model Dados {
   id_X        String?
   ref         String?
   datas       String?
-  Anol        String?
+  AnoI        String?
   AnoF        String?
   periodoA    String?
   nomes       String?

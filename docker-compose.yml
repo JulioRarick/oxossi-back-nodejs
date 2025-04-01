@@ -1,5 +1,5 @@
 services: 
-  node-users-api:
+  oxossi-users-api:
     image: bitnami/postgresql:latest
     ports:
       - "5432:5432"
@@ -7,4 +7,4 @@ services:
       - POSTGRESQL_USERNAME=docker-postgres
       - POSTGRESQL_PASSWORD=JulioN4G4ita
       - POSTGRESQL_DATABASE=docker-postgres-db
-
+    restart: unless-stopped
